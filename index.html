@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowNest - Organic Skincare</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4ebd3a6;
+            /* Add padding to body to prevent content from being hidden by fixed navbar */
+            padding-top: 70px; /* Adjust based on navbar height */
+        }
+        /* Custom styles for image positioning and gradients if needed, though Tailwind handles most */
+        .hero-bg-gradient {
+            background: linear-gradient(to right, #edf6ec 70%, #f0ffe0 100%);
+        }
+        .hero-image-container {
+            position: relative;
+            /* Adjust this width based on how much the image should "bleed" out */
+            width: 70%;  
+        }
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 60%;
+            height: auto;
+            /* max-height: 550px; */
+            border-radius: 100px;
+            /* border-radius: 0.5rem; rounded-lg */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* shadow-xl */
+        }
+
+        /* Glass effect for navbar with lighter color and fixed position */
+        .navbar-glass-effect {
+            background-color: rgba(255, 255, 255, 0.8); /* Lighter, more transparent white */
+            backdrop-filter: blur(10px); /* Blur effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: calc(100% - 2rem); /* 100% width minus 2rem for gap (1rem on each side) */
+            margin: 1rem auto 0 auto; /* 1rem top margin, auto for horizontal centering */
+            border-radius: 1.5rem; /* rounded-xl for curved borders */
+        }
+
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 100px; /* Adjust for stacked navbar on mobile */
+            }
+            .hero-bg-gradient {
+                background: #edf6ec; /* Solid color for mobile */
+            }
+            .hero-image-container {
+                width: 100%;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                margin-top: 2rem;
+            }
+            .hero-image {
+                position: static;
+                transform: none;
+                max-width: 80%;
+                height: auto;
+            }
+            .nav-links-mobile-hidden {
+                display: none;
+            }
+            .search-bar-mobile-hidden {
+                display: none;
+            }
+            .user-actions-mobile-hidden {
+                display: none;
+            }
+            .logo-mobile-center {
+                flex-grow: 1; /* Allow logo to take up space */
+                text-align: center;
+            }
+            .navbar-glass-effect {
+                width: calc(100% - 1rem); /* Smaller gap for mobile */
+                margin: 0.5rem auto 0 auto;
+                border-radius: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <header class="navbar-glass-effect py-4 shadow-sm z-50">
+        <div class="container mx-auto px-4 flex items-center justify-between flex-wrap">
+            <!-- Logo -->
+            <div class="flex items-center text-xl font-semibold text-[#4a6b2e] logo-mobile-center">
+                <!-- Placeholder for logo image -->
+                <img src="https://placehold.co/40x40/e0ffe0/4a6b2e?text=Logo" alt="GlowNest Logo" class="h-10 w-10 rounded-full mr-2">
+                <span>GlowNest</span>
+            </div>
+
+            <!-- Navigation Links (Hidden on small screens, shown with flex-wrap) -->
+            <nav class="flex-grow flex justify-center nav-links-mobile-hidden md:flex">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="text-gray-600 hover:text-[#4a6b2e] font-medium transition-colors duration-300">Shop</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-[#4a6b2e] font-medium transition-colors duration-300">Gift</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-[#4a6b2e] font-medium transition-colors duration-300">Explore</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-[#4a6b2e] font-medium transition-colors duration-300">Blog</a></li>
+                </ul>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="relative flex items-center bg-white rounded-full py-2 px-4 border border-gray-200 search-bar-mobile-hidden md:flex">
+                <input type="text" placeholder="Search anything..." class="outline-none bg-transparent text-sm w-48 pr-8">
+                <i class="fas fa-search text-gray-500 absolute right-4"></i>
+            </div>
+
+            <!-- User Actions -->
+            <div class="flex items-center space-x-6 ml-6 text-xl text-gray-600 user-actions-mobile-hidden md:flex">
+                <i class="fas fa-user cursor-pointer hover:text-[#4a6b2e] transition-colors duration-300"></i>
+                <i class="fas fa-shopping-bag cursor-pointer hover:text-[#4a6b2e] transition-colors duration-300"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg-gradient py-16 md:py-24 overflow-hidden relative">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <!-- Hero Content -->
+            <div class="md:w-1/2 text-center md:text-left z-10">
+                <p class="text-gray-700 text-lg mb-2">Flat 20% Off</p>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-4">
+                    Organic <br> Serum & Oil
+                </h1>
+                <p class="text-gray-600 text-lg mb-8 max-w-md mx-auto md:mx-0">
+                    Discover our collection of organic serums and oils, crafted to nourish and rejuvenate your skin naturally.
+                </p>
+                <a href="#" class="inline-block bg-[#4a6b2e] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#3a5523] transition-colors duration-300 shadow-md">
+                    Shop Now
+                </a>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="md:w-1/2 flex justify-end hero-image-container">
+                <!-- Placeholder for serum bottle image -->
+                <img src="https://i.pinimg.com/736x/f8/7f/0c/f87f0c877034fb98f2ae9e8aa881ab7c.jpg" alt="Hand holding serum bottle" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Serums & Oils Section -->
+    <section class="py-16 md:py-24" style="background-color: #f4ebd3a6;">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Popular Serums & Oils</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center relative flex flex-col items-center">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                    <img src="https://i.pinimg.com/736x/5e/2a/aa/5e2aaa3603c1d15b3e05906aa1237b06.jpg" alt="Glowing Skin Serum" class="w-36 h-36 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Glowing Skin Serum</h3>
+                    <p class="text-gray-500 text-sm mb-2">Vitamin C - 30ml</p>
+                    <p class="text-gray-800 font-bold text-xl">$23.19</p>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center relative flex flex-col items-center">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                    <img src="https://i.pinimg.com/736x/5e/2a/aa/5e2aaa3603c1d15b3e05906aa1237b06.jpg" alt="The Ordinary Oil" class="w-36 h-36 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">The Ordinary Oil</h3>
+                    <p class="text-gray-500 text-sm mb-2">Vitamin C - 10% - 30ml</p>
+                    <p class="text-gray-800 font-bold text-xl">$25.79</p>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center relative flex flex-col items-center">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                    <img src="https://i.pinimg.com/736x/5e/2a/aa/5e2aaa3603c1d15b3e05906aa1237b06.jpg" alt="Facial Serum Vitamin C" class="w-36 h-36 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Facial Serum Vitamin C</h3>
+                    <p class="text-gray-500 text-sm mb-2">Vitamin C - 10% - 30ml</p>
+                    <p class="text-gray-800 font-bold text-xl">$27.31</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center relative flex flex-col items-center">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                    <img src="https://i.pinimg.com/736x/5e/2a/aa/5e2aaa3603c1d15b3e05906aa1237b06.jpg" alt="Facial Serum Vitamin C" class="w-36 h-36 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Facial Serum Vitamin C</h3>
+                    <p class="text-gray-500 text-sm mb-2">Vitamin C - 10% - 30ml</p>
+                    <p class="text-gray-800 font-bold text-xl">$27.31</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center relative flex flex-col items-center">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                    <img src="https://i.pinimg.com/736x/5e/2a/aa/5e2aaa3603c1d15b3e05906aa1237b06.jpg" alt="Facial Serum Vitamin C" class="w-36 h-36 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Facial Serum Vitamin C</h3>
+                    <p class="text-gray-500 text-sm mb-2">Vitamin C - 10% - 30ml</p>
+                    <p class="text-gray-800 font-bold text-xl">$27.31</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center relative flex flex-col items-center">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                    <img src="https://i.pinimg.com/736x/5e/2a/aa/5e2aaa3603c1d15b3e05906aa1237b06.jpg" alt="Facial Serum Vitamin C" class="w-36 h-36 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Facial Serum Vitamin C</h3>
+                    <p class="text-gray-500 text-sm mb-2">Vitamin C - 10% - 30ml</p>
+                    <p class="text-gray-800 font-bold text-xl">$27.31</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center relative flex flex-col items-center">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                    <img src="https://i.pinimg.com/736x/5e/2a/aa/5e2aaa3603c1d15b3e05906aa1237b06.jpg" alt="Facial Serum Vitamin C" class="w-36 h-36 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Facial Serum Vitamin C</h3>
+                    <p class="text-gray-500 text-sm mb-2">Vitamin C - 10% - 30ml</p>
+                    <p class="text-gray-800 font-bold text-xl">$27.31</p>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 text-center relative flex flex-col items-center">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors duration-200">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                    <img src="https://i.pinimg.com/736x/5e/2a/aa/5e2aaa3603c1d15b3e05906aa1237b06.jpg" alt="Vita B3 Source" class="w-36 h-36 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Vita B3 Source</h3>
+                    <p class="text-gray-500 text-sm mb-2">Niacinamide - 60ml</p>
+                    <p class="text-gray-800 font-bold text-xl">$29.18</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
