@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Call Deepseek API
   async function callDeepseekAPI(message) {
-    const API_URL = 'https://api.openrouter.ai/api/v1/chat/completions';
-    const API_KEY = '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'; // Your OpenRouter key
+    const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
+    const API_KEY = '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'; // Your OpenRouter key
 
     try {
       const response = await fetch(API_URL, {
