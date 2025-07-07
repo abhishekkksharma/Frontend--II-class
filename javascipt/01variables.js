@@ -19,3 +19,26 @@ else if(units<=500){
     charge = 200*1 + 200*2 + (units-500)*5;
 }
 console.log(charge);
+
+
+/* 
+-display the greatest of three numbers
+- get age , pincode and price,
+   if age>18 and price >1000 or pincode is 200004,
+    add 10% tax to the price 
+   else 
+    add 5% to the price 
+*/
+
+let age =19;
+let pincode =200004;
+let price = 1500;
+
+if((age>18 && price >1000) || pincode==20004 ){
+    price = price + 0.1*price;
+}
+else{
+    price= price + price*.05;
+}
+console.log("The final price is: ",price);
+
