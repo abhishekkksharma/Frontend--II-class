@@ -115,4 +115,105 @@ for (let i = 1; i <= 100 ; i++) {
 }
 console.log(`Total numbers divisible by 9: ${divisibleByNine}`);
 
-//14
+//15
+for (let index = 1; index <= 10; index++) {
+    console.log("7 x",index,"=",7*index);    
+}
+
+//16
+for (let i = 1; i <= 30; i++) {
+    if(i%2==0){
+        console.log(`Dat-${i} is Even`);
+    }else{
+        console.log(`Dat-${i} is Odd`);
+    }   
+}
+
+//17 
+for (let i = 1; i <= 50; i++) {
+    if(i==5 || i==13){
+        continue;
+    }else{
+        console.log(`Day ${i}`);
+    }
+}
+
+//18
+for (let i = 1; i <= 50; i++) {
+    if(i%3==0){
+        console.log("Fizz Day");
+    } 
+    else{
+        console.log(`Day ${i}`);
+        
+    }   
+}
+//19 
+
+for (let i = 1; i <= 50; i++) {
+    if(i%5==0){
+        console.log("Buzz Day");
+    } 
+    else{
+        console.log(`Day ${i}`);
+        
+    }   
+}
+//20
+for (let i = 1; i <= 50; i++) {
+    if(i%5==0 && i%3==0){
+        console.log("FizzBuzz");
+    } 
+    else{
+        console.log(`Day ${i}`);
+        
+    }   
+}
+
+//21
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=10;j++){
+        console.log(`${i} x ${j} = ${i*j}`);
+    }
+}
+//24
+let x=3;
+let factnum=1
+while (x!=0) {
+    factnum*=x;
+    x--;
+}
+console.log(factnum);
+
+//25
+let num=13;
+let notprime=true;
+for(let i=2;i*i<=num;i++){
+    if(num%i==0){
+        console.log("Not prime");
+        notprime=false;
+    }
+}
+if(notprime){
+    console.log("Prime number");
+}
+
+//27 
+let y=123;
+let rev =0;
+while (y>0) {
+    let remainder=y%10;
+    rev = rev*10 +remainder;
+    y = Math.floor(y / 10); // Ensures y remains an integer
+}
+console.log(rev);
+
+//29
+let randomNum=5432;
+let sum=0;
+while (randomNum>0) {
+    sum+= randomNum%10;
+    randomNum = Math.floor(randomNum / 10); // Ensures y remains an integer
+}
+console.log(sum);
+
