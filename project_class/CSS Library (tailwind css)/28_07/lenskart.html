@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div class="container mx-auto p-8">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <div class="relative w-1/3">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <img src="https://icongr.am/feather/search.svg?size=20&color=9ca3af" alt="Search Icon" />
+                </span>
+                <input type="text" placeholder="Search products..." class="w-full bg-white border border-gray-200 rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 border border-gray-200 rounded-lg bg-white">
+                    <img src="https://icongr.am/feather/filter.svg?size=24&color=4b5563" alt="Filter Icon" />
+                </button>
+                <button class="flex items-center bg-white border border-gray-200 text-gray-700 font-medium py-2 px-4 rounded-lg">
+                    <span>Actions</span>
+                    <img src="https://icongr.am/feather/chevron-down.svg?size=16&color=currentColor" alt="Dropdown Arrow" class="ml-2" />
+                </button>
+            </div>
+        </header>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-4 gap-8">
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="relative">
+                    <img src="https://i.pinimg.com/1200x/3d/21/71/3d2171253a884e07e05442ec3c1d636e.jpg" alt="Glasses" class="w-full h-48 object-cover">
+                    <span class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">Available</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-gray-800 font-semibold">Round Selfy Black Frame</h3>
+                    <p class="text-gray-500 text-sm mb-4">White Lens</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>12.09.20</span>
+                        <span>Fram</span>
+                        <span class="text-gray-800 font-bold">$2.500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="relative">
+                    <img src="https://i.pinimg.com/1200x/ef/b2/0e/efb20e0fb7064b5df6f3db9a10b31fb1.jpg" alt="Glasses" class="w-full h-48 object-cover">
+                    <span class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">Available</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-gray-800 font-semibold">Round Selfy Black Frame</h3>
+                    <p class="text-gray-500 text-sm mb-4">White Lens</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>12.09.20</span>
+                        <span>Fram</span>
+                        <span class="text-gray-800 font-bold">$2.500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 (Disabled) -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="relative">
+                    <img src="https://i.pinimg.com/736x/a4/f7/55/a4f755ee6f52f6706cd20a092848130a.jpg" alt="Glasses" class="w-full h-48 object-cover">
+                    <span class="absolute top-3 left-3 bg-red-100 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full">Disabled</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-gray-800 font-semibold">Round Selfy Black Frame</h3>
+                    <p class="text-gray-500 text-sm mb-4">White Lens</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>12.09.20</span>
+                        <span>Fram</span>
+                        <span class="text-gray-800 font-bold">$2.500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden border-2 border-blue-500">
+                <div class="relative">
+                    <img src="https://i.pinimg.com/1200x/13/39/32/13393256e87e0f87d0fd400ce91a7fb9.jpg" alt="Glasses" class="w-full h-48 object-cover">
+                    <span class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">Available</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-gray-800 font-semibold">Round Selfy Black Frame</h3>
+                    <p class="text-gray-500 text-sm mb-4">White Lens</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>12.09.20</span>
+                        <span>Fram</span>
+                        <span class="text-gray-800 font-bold">$2.500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="relative">
+                    <img src="https://i.pinimg.com/1200x/49/fd/df/49fddf8d829c94f83820068e269c4666.jpg" alt="Glasses" class="w-full h-48 object-cover">
+                    <span class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">Available</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-gray-800 font-semibold">Round Selfy Black Frame</h3>
+                    <p class="text-gray-500 text-sm mb-4">White Lens</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>12.09.20</span>
+                        <span>Fram</span>
+                        <span class="text-gray-800 font-bold">$2.500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6 (Disabled) -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="relative">
+                    <img src="https://i.pinimg.com/1200x/1d/f1/82/1df182471f299761ad68eb315a3d0b73.jpg" alt="Glasses" class="w-full h-48 object-cover">
+                    <span class="absolute top-3 left-3 bg-red-100 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full">Disabled</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-gray-800 font-semibold">Round Selfy Black Frame</h3>
+                    <p class="text-gray-500 text-sm mb-4">White Lens</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>12.09.20</span>
+                        <span>Fram</span>
+                        <span class="text-gray-800 font-bold">$2.500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden border-2 border-green-500">
+                <div class="relative">
+                    <img src="https://i.pinimg.com/1200x/50/66/26/5066265e8717a0184b76de2a16e7a0f6.jpg" alt="Glasses" class="w-full h-48 object-cover">
+                    <span class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">Available</span>
+                     <span class="absolute top-3 right-3 bg-white p-1 rounded-full">
+                        <img src="https://icongr.am/feather/check.svg?size=16&color=22c55e" alt="Checkmark Icon" />
+                    </span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-gray-800 font-semibold">Round Selfy Black Frame</h3>
+                    <p class="text-gray-500 text-sm mb-4">White Lens</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>12.09.20</span>
+                        <span>Fram</span>
+                        <span class="text-gray-800 font-bold">$2.500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="relative">
+                    <img src="https://i.pinimg.com/1200x/3a/61/d5/3a61d59e7671de076aea8c7d86e28bdd.jpg" alt="Glasses" class="w-full h-48 object-cover">
+                    <span class="absolute top-3 left-3 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">Available</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-gray-800 font-semibold">Round Selfy Black Frame</h3>
+                    <p class="text-gray-500 text-sm mb-4">White Lens</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>12.09.20</span>
+                        <span>Fram</span>
+                        <span class="text-gray-800 font-bold">$2.500</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
