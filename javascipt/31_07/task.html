@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Fact Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+<body class="bg-teal-50 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white rounded-xl shadow-lg p-8 sm:p-10 max-w-xl w-full text-center">
+        
+        <h1 class="text-3xl sm:text-4xl font-bold text-indigo-800 mb-2">
+            Discover Cool Facts About Numbers
+        </h1>
+        
+        <p class="text-gray-500 mb-8">
+            Type in a number and we'll show you something fascinating about it. That's it. Simple. Fun. Addictive.
+        </p>
+
+        <form id="fact-form" class="flex w-full max-w-md mx-auto mb-6">
+            <input 
+                type="number" 
+                id="number_input" class="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-500" 
+                
+            />
+            <button onclick="getData()" class="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-r-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-opacity">
+                Get Fact
+            </button>
+        </form>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-md p-4 w-full max-w-md mx-auto mb-8 min-h-[6rem] flex items-center justify-center">
+            <p id="para" class="text-gray-700">
+            </p>
+        </div>
+        
+    </div>
+
+</body>
+</html>
