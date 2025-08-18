@@ -3,7 +3,7 @@ async function getData() {
     const videosDiv = document.getElementById('videos-div');
     const loading = document.getElementById('loading');
     const errorMessage = document.getElementById('error-message');
-    const API_KEY = "AIzaSyBKtYKYDN6Sgy5So9l3L8vLQKBCF8L7sQk";
+    const API_KEY = "";
 
     try {
         const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${topic}&key=${API_KEY}&type=video&maxResults=20`);
